@@ -1,0 +1,6 @@
+Page URL: {{ feedback.url|default:"URL not available" }}
+
+User: {% if feedback.user %}{{ feedback.user.get_full_name }} ({{ feedback.user.username }}){% else %}Anonymous{% endif %}
+
+Feedback:
+{{ feedback.feedback }}

@@ -1,0 +1,3 @@
+<form action='{% url django-user-feedback %}' method='POST'>{% csrf_token %}
+    {{ feedback_form.as_p }}
+</form>
