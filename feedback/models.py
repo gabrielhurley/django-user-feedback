@@ -11,7 +11,7 @@ FEEDBACK_TYPES = (
 class Feedback(models.Model):
     feedback = models.TextField()
     user = models.ForeignKey(User, null=True, blank=True)
-    url = models.URLField(blank=True)
+    url = models.URLField(blank=True, verify_exists=False)
     timestamp = models.DateTimeField(auto_now_add=True, editable=False)
     resolved = models.BooleanField(default=False)
     publish = models.BooleanField(default=False)
